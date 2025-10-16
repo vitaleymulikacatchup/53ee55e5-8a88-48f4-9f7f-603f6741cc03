@@ -7,6 +7,7 @@ import ProductCardOne from '@/components/sections/product/ProductCardOne';
 import TestimonialCardOne from '@/components/sections/testimonial/TestimonialCardOne';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
+import { CheckCircle } from 'lucide-react';
 
 const assetMap: { id: string; url: string; alt?: string }[] = [
   { id: "heroImage", url: "https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "A mouthwatering slice of pepperoni pizza with cheese and spices, ideal for any meal." },
@@ -42,7 +43,7 @@ export default function Home() {
             title="Welcome to Our Pizzeria"
             description="Delicious pizzas made with love!"
             tag="Now Open"
-            imageSrc="https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            imageSrc="asset://heroImage"
             buttons={[
               { text: "See Menu", href: "menu" },
               { text: "Order Online", href: "contact" }
@@ -57,7 +58,7 @@ export default function Home() {
               { title: "Fresh Ingredients", description: "Only the best for our pizzas!", icon: CheckCircle },
               { title: "Experienced Chefs", description: "Led by a passionate kitchen team." }
             ]}
-            imageSrc="https://images.pexels.com/photos/5216394/pexels-photo-5216394.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            imageSrc="asset://aboutImage"
           />
         </div>
       </div>
@@ -65,9 +66,9 @@ export default function Home() {
         <div className="mx-auto px-4 md:px-6">
           <ProductCardOne
             products={[
-              { id: "1", name: "Margherita", price: "$12", imageSrc: "https://images.pexels.com/photos/12046657/pexels-photo-12046657.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" },
-              { id: "2", name: "Pepperoni", price: "$14", imageSrc: "https://images.pexels.com/photos/12046657/pexels-photo-12046657.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" },
-              { id: "3", name: "Veggie Deluxe", price: "$13", imageSrc: "https://images.pexels.com/photos/12046657/pexels-photo-12046657.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" }
+              { id: "1", name: "Margherita", price: "$12", imageSrc: "asset://menuImage" },
+              { id: "2", name: "Pepperoni", price: "$14", imageSrc: "asset://menuImage" },
+              { id: "3", name: "Veggie Deluxe", price: "$13", imageSrc: "asset://menuImage" }
             ]}
             title="Our Menu"
           />
@@ -77,7 +78,7 @@ export default function Home() {
         <div className="mx-auto px-4 md:px-6">
           <TestimonialCardOne
             testimonials={[
-              { id: "1", name: "Jane Doe", role: "Food Blogger", company: "Taste Buds Blog", rating: 5, imageSrc: "https://images.pexels.com/photos/7142968/pexels-photo-7142968.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" }
+              { id: "1", name: "Jane Doe", role: "Food Blogger", company: "Taste Buds Blog", rating: 5, imageSrc: "asset://testimonialImage_1" }
             ]}
             title="What Our Customers Say"
             description="Real feedback from our pizza fans!"
@@ -90,8 +91,8 @@ export default function Home() {
             tag="Order"
             title="Order Your Favorite Pizza"
             description="Place your order online or contact us for reservations."
+            imageSrc="asset://heroImage"
             mediaPosition="right"
-            imageSrc="https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
           />
         </div>
       </div>
